@@ -32,13 +32,9 @@
               }
             ],
             "styles": [
-              "./ode_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/style.css"
+              "src/global.scss"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
+            "scripts": [],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
