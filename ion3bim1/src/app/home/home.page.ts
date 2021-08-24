@@ -6,21 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  gasolina  = null;
-  etanol    = null;
-  resposta  = null;
+  gasolina  = undefined;
+  etanol    = undefined;
+  resposta  = undefined;
 
-  calculoCom = this.etanol / this.gasolina;
+    verificar(): void{
+    let diferenca = this.etanol / this.gasolina;
+  if(diferenca > 0.7){
+      this.resposta = 'GASOLINA';
 
-  calcular(): void{
-   if(this.calculoCom < 0,7){
-     this.resposta = 'Etanol';
-   }
-   if(this.calculoCom > 0,7){
-     this.resposta = 'Gasolina';
-   }
+  }else if(diferenca < 0.7){
+    this.resposta = 'ETANOL';
+
+  }else{
+    this.resposta = 'TANTO FAZ...'
+  }
   }
   
   constructor() {}
-
 }

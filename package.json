@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/LucasEduardoLaraSilva/3w_paw_2021#readme",
   "dependencies": {
+    "@angular/cli": "^12.2.2",
     "express": "^4.17.1"
   }
 }
