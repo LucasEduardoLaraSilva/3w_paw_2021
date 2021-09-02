@@ -6,22 +6,38 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  gasolina  = undefined;
-  etanol    = undefined;
-  resposta  = undefined;
+  gasolina  = null;
+  etanol    = null;
+  resposta  = null;
 
-    verificar(): void{
-    let diferenca = this.etanol / this.gasolina;
-  if(diferenca > 0.7){
-      this.resposta = 'GASOLINA';
+  carros = [
+    ('assets/img/carro1.jpg'),
+    'boi',
+    'joão'
+  ]
 
-  }else if(diferenca < 0.7){
-    this.resposta = 'ETANOL';
+  calculoCom = this.etanol / this.gasolina;
+  src: string;
 
-  }else{
-    this.resposta = 'TANTO FAZ...'
-  }
-  }
+ verificar(): void{
+   let diferenca = this.etanol / this.gasolina;
+
+   if(diferenca > 0.7){
+     this.resposta = 'GASOLINA' + this.carros[0];
+   }else if(diferenca < 0.7){
+     this.resposta = 'ETANOL'[1];
+   }else{
+     this.resposta = 'TANTO FAZ...';
+   }
+ }
+
+  carro = 'inicio.jpg';
   
   constructor() {}
+
+  //criação de métodos
+  trocarCarro(indice:number): void{
+    this.carro = this.carros[indice];
+  }
+
 }
