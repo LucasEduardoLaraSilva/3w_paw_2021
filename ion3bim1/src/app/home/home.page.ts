@@ -6,38 +6,36 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  gasolina  = null;
-  etanol    = null;
-  resposta  = null;
+  gasolina  = undefined;
+  etanol    = undefined;
+  resposta  = undefined;
 
-  carros = [
-    ('assets/img/carro1.jpg'),
-    'boi',
-    'joão'
-  ]
-
-  calculoCom = this.etanol / this.gasolina;
-  src: string;
-
- verificar(): void{
-   let diferenca = this.etanol / this.gasolina;
-
-   if(diferenca > 0.7){
-     this.resposta = 'GASOLINA' + this.carros[0];
-   }else if(diferenca < 0.7){
-     this.resposta = 'ETANOL'[1];
-   }else{
-     this.resposta = 'TANTO FAZ...';
-   }
- }
-
-  carro = 'inicio.jpg';
+ combustivel = [
+   'gasolina.jpg',
+   'etanol.jpg',
+   'dois.jpg'
+ ]
+ inicio = 'inicio.png';
   
   constructor() {}
 
-  //criação de métodos
-  trocarCarro(indice:number): void{
-    this.carro = this.carros[indice];
+  trocarCombustivel(indice: number):void{
+    this.inicio = this.combustivel[indice];
+  }
+
+  verificar():void{
+    let diferenca = this.etanol / this.gasolina;
+
+    if(diferenca > 0.7){
+      this.inicio = this.combustivel[0];
+      this.resposta = 'gasolina';
+    }else if(diferenca < 0.7){
+      this.inicio = this.combustivel[1];
+      this.resposta = 'etanol';
+    }else{
+      this.inicio = this.combustivel[2];
+      this.resposta = 'Tanto faz';
+    }
   }
 
 }
