@@ -8,31 +8,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-img class="logo" src="assets/img/inicio.jpg"></ion-img>
-
   <div id="container">
-  <ion-item>
-    <ion-label position="floating">
-      Gasolina R$
-    </ion-label>
-    <ion-input type="number" [(ngModel)]="gasolina"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Etanol R$
-    </ion-label>
-    <ion-input type="number" [(ngModel)]="etanol"></ion-input>
-  </ion-item>
-  <ion-item lines="none">
-    <p class="ion-text">Abastece com: {{ resposta }}</p>
-  </ion-item>
-  <div>
-    <ion-button color="warning" expand="block" (click)="verificar()">
-      CALCULAR
-    </ion-button>
-  </div>  
-  </div>
-  <div class="dist">
-    <img src="assets/img/{{ inicio }}">
-  </div>
+    <ion-img src="assets/img/inicio.jpg"></ion-img>
+      <div>
+        <ion-item>
+          <ion-label position="floating">
+            Preço da Gasolina
+          </ion-label>
+          <ion-Input type="number"></ion-Input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            Preço do Etanol
+          </ion-label>
+          <ion-Input type="number"></ion-Input>
+        </ion-item>
+      </div>
+      </div> 
 </ion-content>
